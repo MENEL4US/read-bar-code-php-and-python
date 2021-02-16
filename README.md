@@ -1,1 +1,1 @@
-# 
+# Python code to receive a file with Barcode or QR code and return the value
