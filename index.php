@@ -1,14 +1,14 @@
 <?php
+    include_once "classes/Image.class.php";
+    include_once "classes/Bar_code.class.php";
 
+    // Get file upload
+    $img = Image::upload();
+    if (!$img) {
+        echo "Upload error!"; die();
+    }
 
-$response = exec("python python/read.py python\cetelem.jpg I25");
+    $img = Bar_code::info($img, "I25");
 
-$response = (array)json_decode($response);
-
-print_r($response);
-
-
-
-
-
+    var_dump($img);
 ?>

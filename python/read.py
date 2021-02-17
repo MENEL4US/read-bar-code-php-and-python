@@ -37,7 +37,7 @@ file_name = str(sys.argv[1])
 code_type = str(sys.argv[2])
 
 # Save location of images
-file_path = os.getcwd()
+file_path = ""
 
 # Read the image
 img = read_image(file_path+'\\'+file_name)
@@ -46,5 +46,5 @@ img = decode_image(img)
 # Get the information
 data = get_info(img, code_type)
 
-print(json.dumps({'STATUS':'success','data':data}))
+print(json.dumps({'STATUS':'success','DATA':data}))
 quit()
